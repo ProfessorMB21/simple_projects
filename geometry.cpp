@@ -62,7 +62,7 @@ float getArea(float x1, float y1, float x2, float y2, float x3, float y3)
 */
 float getDistFromPoint(float px1, float py1, float x2, float y2, float x3, float y3)
 {
-    float area = getArea(P, A, B);
-    float AB = distance(A, B);
+    float area = getArea(px1, py1, x2, y2, x3, y3);
+    float AB = getDistance(x2, y2, x3, y3);
     return (2 * area) / AB;
 }
