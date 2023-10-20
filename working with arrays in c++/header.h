@@ -1,5 +1,4 @@
 #pragma once
-#ifndef _ARRAY
 
 #include <stdlib.h>
 #include <iostream>
@@ -15,9 +14,8 @@
  * print contents and their indices in the array
  * 
 */
-void *createArr(int arrSize);
+int *createArr(int arrSize);
 void fillArr(int *arr, int arrSize, int value);
 void deleteArr(int *arr);
 void printArr(int *arr);
 
-#endif

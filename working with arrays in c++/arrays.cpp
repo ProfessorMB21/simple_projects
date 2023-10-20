@@ -5,10 +5,10 @@
  * @param arrSize - The size of the array to be returned
  * @return pointer to the new array, otherwise NULL
 */
-void *createArr(int arrSize)
+int *createArr(int arrSize)
 {
     if (arrSize <= 0){ return nullptr;} 
-    return new int[arrSize];  
+    return (new int[arrSize]);  
 }
 
 /**
