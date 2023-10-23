@@ -15,7 +15,6 @@
  * print contents and their indices in the array
  * 
 */
-
 int *createArr(int arrSize);
 void fillArr(int *arr, int arrSize, int value);
 void deleteArr(int *arr);
