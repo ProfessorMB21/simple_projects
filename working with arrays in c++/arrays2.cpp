@@ -1,5 +1,6 @@
 #include "header2.h"
 
+
 /**
  * @isPrime - Check if the given number is prime
  * @param n - range of numbers
@@ -9,10 +10,10 @@ bool isPrime(int n)
 {
     if (n == 0 || n == 1) {return (false);}
     // iterate from 2 to n-1
-    for (int i = 0; i < n -1; i++){
+    for (int i = 2; i < n-1; i++){
         if (n%i == 0) {return (false);}
-        else return (true);
     }
+    return (true);
 }
 
 /**

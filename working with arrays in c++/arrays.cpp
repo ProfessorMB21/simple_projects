@@ -5,10 +5,12 @@
  * @param arrSize - The size of the array to be returned
  * @return pointer to the new array, otherwise NULL
 */
-void *createArr(int arrSize)
+int *createArr(int arrSize)
 {
-    if (arrSize <= 0){ return nullptr;} 
-    return new int[arrSize];  
+    if (arrSize <= 0){ return (NULL);} 
+
+    int *newArr = new int[arrSize];
+    return (newArr);
 }
 
 /**
@@ -32,18 +34,20 @@ void fillArr(int *arr, int arrSize, int value)
 */
 void deleteArr(int *arr)
 {
-    delete(arr);
+    delete[] (arr);
 }
 
 /**
  * @printArr - Print the given array
  * @param arr - The array to whose elements are to be printed
+ * @param size - The size of the array
  * @return void
 */
-void printArr(int *arr)
+void printArr(int *arr, int size)
 {
-    while (*arr){
-        std::cout<<*(arr)<<endl;
-        arr++;
+    int i = 0;
+    while (i < size) {
+        std::cout << i << " : " << *(arr + i) << std::endl;
+        i++;
     }
 }

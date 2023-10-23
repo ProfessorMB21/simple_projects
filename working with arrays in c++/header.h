@@ -1,8 +1,8 @@
 #pragma once
 #ifndef _ARRAY
+#define _ARRAY
 
-#include <stdlib.h>
-#include <iostream>
+#include "Header1.h"
 
 /**
  * These are functions which you'll write
@@ -15,9 +15,10 @@
  * print contents and their indices in the array
  * 
 */
-void *createArr(int arrSize);
+
+int *createArr(int arrSize);
 void fillArr(int *arr, int arrSize, int value);
 void deleteArr(int *arr);
-void printArr(int *arr);
+void printArr(int *arr, int size);
 
-#endif
+#endif // _ARRAY
