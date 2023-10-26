@@ -7,7 +7,7 @@
 //prototypes
 
 bool isPrime(int n);
-void printAtIndex(int *arr, int arrSize);
-int findNum(int *arr, int num);
+void printAtIndex(int *arr, int arrSize, int index);
+int findNum(int *arr, int size, int num);
 
 #endif

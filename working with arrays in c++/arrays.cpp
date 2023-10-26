@@ -28,6 +28,16 @@ void fillArr(int *arr, int arrSize, int value)
 }
 
 /**
+* @fillArr2 - A second version of fillArr 
+*/
+void fillArr2(int* arr, int arrSize)
+{
+    for (int i = 0; i < arrSize; i++) {
+        std::cin >> *(arr + i);
+    }
+}
+
+/**
  * @deleteArr - Delete the given array
  * @param arr - The array to delete 
  * @return void
@@ -41,13 +51,21 @@ void deleteArr(int *arr)
  * @printArr - Print the given array
  * @param arr - The array to whose elements are to be printed
  * @param size - The size of the array
+ * @param i_Index - Prints to stdout the given index with its
+ * value in the array. 0 (no index). Any other value
+ * will include the index in the output
  * @return void
 */
-void printArr(int *arr, int size)
+void printArr(int *arr, int size, int i_Index)
 {
     int i = 0;
     while (i < size) {
-        std::cout << i << " : " << *(arr + i) << std::endl;
-        i++;
+        if (i_Index != 0) {
+            std::cout << i << " : " << *(arr + i) << std::endl;
+            i++;
+        } else {
+            std::cout << *(arr + i) << std::endl;
+            i++;
+        }
     }
 }

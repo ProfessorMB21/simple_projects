@@ -17,7 +17,8 @@
 */
 int *createArr(int arrSize);
 void fillArr(int *arr, int arrSize, int value);
+void fillArr2(int* arr, int arrSize);
 void deleteArr(int *arr);
-void printArr(int *arr, int size);
+void printArr(int *arr, int size, int i_Index);
 
 #endif // _ARRAY
