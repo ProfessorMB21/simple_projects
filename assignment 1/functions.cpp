@@ -1,4 +1,4 @@
-#include "Header.h"
+#include "main.h"
 
 /**
 * create2dArr - Creates a 2d array
@@ -13,7 +13,6 @@ void create2dArr(int **&arr, int rows)
 		return ;
 
 	arr = new int*[rows];
-	
 	for (int i = 0; i < rows; i++)
 	{
 		arr[i] = new int[rows];
@@ -26,10 +25,8 @@ void create2dArr(int **&arr, int rows)
 *
 * @return: void
 */
-void del2dArr(int **arr)
+void del2dArr(int **arr, int rows)
 {
-	int rows = _msize(arr) / sizeof(*arr[0]);
-	
 	for (int i = 0; i < rows; i++)
 	{
 		delete[] (arr[i]);
@@ -43,15 +40,13 @@ void del2dArr(int **arr)
 *
 * @return: void
 */
-void print2dArr(int **arr)
+void print2dArr(int **arr, int rows)
 {
-	int rows = _msize(arr) / sizeof(*arr[0]);
-
-	for (int i = 0; i < rows; i++)
+	for (int index = 0; index < rows; index++)
 	{
 		for (int j = 0; j < rows; j++)
 		{
-			std::cout << arr[i][j] << " ";
+			std::cout<< arr[index][j] <<"\t";
 		}
 		std::cout << std::endl;
 	}
@@ -63,20 +58,21 @@ void print2dArr(int **arr)
 *
 * @return: void
 */
-void fill2dArr(int **arr)
+void fill2dArr(int **arr, int rows)
 {
-	int rows;
+	int index, j;
 
-	rows = _msize(arr) / sizeof(*arr[0]);
-
-	for (int index = 0; index < rows; index++)
+	srand(time(NULL)); /** we seed the value */
+	for (index = 0; index < rows; index++)
 	{
-		/** we seed the value */
-		srand(time(NULL));
-		for (int j = 0; j < rows; j++)
+		for (j = 0; j < rows; j++)
 		{
-			arr[index][j] = rand() - RAND_MAX / 1008;			
+			size_t random = rand() % 1001;
+			std::cout<< random <<"\t";
+			arr[index][j] = random;
+			//std::cout<< *arr[j] <<" ";
 		}
+		std::cout << std::endl;
 	}
 }
 
@@ -103,18 +99,18 @@ void swap(int &a, int &b)
 */
 void bubblesort2d(int **arr, bool (*cmp)(int a, int b))
 {
-	bool flag;
-	int len;
+	//bool flag;
+	size_t len, i, j;
 
-	len = _msize(arr) / sizeof(*arr[0]);
-
-	for (int i = 0; i < len; i++)
+	len = _msize(arr) / sizeof(arr[0]);
+	for (i = 0; i < len; i++)
 	{
-		flag = false; /** we haven't swapped anything yet */
-		for (int j = 0; j < len; j++)
+		//flag = false; /** we haven't swapped anything yet */
+		for (j = 0; j < len; j++)
 		{
-			int a = i;
-			int b = j + 1;
+			size_t a, b;
+			a = i;
+			b = j + 1;
 			while (true)
 			{
 				if (b == len)
@@ -126,6 +122,7 @@ void bubblesort2d(int **arr, bool (*cmp)(int a, int b))
 
 				if (cmp(arr[i][j], arr[a][b]))
 				{
+					//flag = true; /** swapping */
 					swap(arr[i][j], arr[a][b]);
 				}
 

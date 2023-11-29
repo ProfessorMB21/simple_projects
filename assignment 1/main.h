@@ -33,9 +33,9 @@
 
 /** prototypes */
 void create2dArr(int **&arr, int rows);
-void fill2dArr(int **arr);
-void print2dArr(int **arr);
-void del2dArr(int **arr);
+void fill2dArr(int **arr, int rows);
+void print2dArr(int **arr, int rows);
+void del2dArr(int **arr, int rows);
 void swap(int &a, int &b);
 void bubblesort2d(int **arr, bool (*cmp)(int a, int b));
 
@@ -58,8 +58,8 @@ void bubblesort2d(int **arr, bool (*cmp)(int a, int b));
 */
 
 /** comparators */
-auto cmpDesc = [](int a, int b) -> bool { return (a < b);};
-auto cmpAsc = [](int a, int b) -> bool { return (a > b);};
+//auto cmpDesc = [](int a, int b) -> bool { return (a < b);};
+//auto cmpAsc = [](int a, int b) -> bool { return (a > b);};
 
 ///////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////// HEADER.H ///////////////////////////////
