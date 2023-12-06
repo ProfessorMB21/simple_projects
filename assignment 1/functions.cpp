@@ -7,7 +7,7 @@
 *
 * @return: new allocated memory for the array, otherwise nullptr
 */
-void create2dArr(int **&arr, int rows)
+void create2dArr(int**& arr, int rows)
 {
 	if (rows <= 0 || !arr)
 		return ;
@@ -25,7 +25,7 @@ void create2dArr(int **&arr, int rows)
 *
 * @return: void
 */
-void del2dArr(int **arr, int rows)
+void del2dArr(int** arr, int rows)
 {
 	for (int i = 0; i < rows; i++)
 	{
@@ -40,7 +40,7 @@ void del2dArr(int **arr, int rows)
 *
 * @return: void
 */
-void print2dArr(int **arr, int rows)
+void print2dArr(int** arr, int rows)
 {
 	for (int index = 0; index < rows; index++)
 	{
@@ -58,7 +58,7 @@ void print2dArr(int **arr, int rows)
 *
 * @return: void
 */
-void fill2dArr(int **arr, int rows)
+void fill2dArr(int** arr, int rows)
 {
 	int index, j;
 
@@ -83,7 +83,7 @@ void fill2dArr(int **arr, int rows)
 *
 * @return: void
 */
-void swap(int &a, int &b)
+void swap(int& a, int& b)
 {
 	int temp = a;
 	a = b;
@@ -97,7 +97,7 @@ void swap(int &a, int &b)
 *
 * @return: void
 */
-void bubblesort2d(int **arr, bool (*cmp)(int a, int b))
+void bubblesort2d(int** arr, bool (*cmp)(int a, int b))
 {
 	//bool flag;
 	size_t len, i, j;

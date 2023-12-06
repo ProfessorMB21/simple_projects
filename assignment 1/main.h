@@ -1,7 +1,8 @@
 ///////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// HEADER.H /////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
-
+#ifndef _MAIN_H
+#define _MAIN_H
 /**
 * Fill an array with random numbers
 * Sort a 2d array. You choose the sorting algo yourself
@@ -32,35 +33,14 @@
 */
 
 /** prototypes */
-void create2dArr(int **&arr, int rows);
-void fill2dArr(int **arr, int rows);
-void print2dArr(int **arr, int rows);
-void del2dArr(int **arr, int rows);
-void swap(int &a, int &b);
-void bubblesort2d(int **arr, bool (*cmp)(int a, int b));
+void create2dArr(int**& arr, int rows);
+void fill2dArr(int** arr, int rows);
+void print2dArr(int** arr, int rows);
+void del2dArr(int** arr, int rows);
+void swap(int& a, int& b);
+void bubblesort2d(int** arr, bool (*cmp)(int a, int b));
 
-//////////////// ALERT!! COMPARATORS BELOW ////////////////////////////////////
-/**
-* compareDesc - Compare function that helps in sorting an array
-*				in descending order of absolute magnitude of a number
-*
-* @a: integer
-* @b: integer
-* @return: bool
-*/
-/**
-* compareAsc - Compare function that helps in sorting an array
-*				in ascending order of absolute magnitude of a number
-*
-* @a: integer
-* @b: integer
-* @return: bool
-*/
-
-/** comparators */
-//auto cmpDesc = [](int a, int b) -> bool { return (a < b);};
-//auto cmpAsc = [](int a, int b) -> bool { return (a > b);};
-
+#endif // _MAIN_H_
 ///////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////// HEADER.H ///////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
