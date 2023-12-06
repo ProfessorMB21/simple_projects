@@ -5,7 +5,7 @@ int main()
 {
 	setlocale(LC_ALL, "");
 	
-    int **arr;
+    int** arr;
     int rows;
     //auto cmpDesc = [](int a, int b) -> bool { return (a < b);};
 

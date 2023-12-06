@@ -1,2 +1,2 @@
-# geometry
-This repository is not just about geometry projects but other miscelleanous projects given as tasks at my university.
+# c++ :)
+<h1 style="align: center">C++ Programming tasks</h1>
