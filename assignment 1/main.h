@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////// HEADER.H /////////////////////////////////
+//////////////////////////////////// MAIN.H ///////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 #ifndef _MAIN_H
 #define _MAIN_H
@@ -39,8 +39,36 @@ void print2dArr(int** arr, int rows);
 void del2dArr(int** arr, int rows);
 void swap(int& a, int& b);
 void bubblesort2d(int** arr, bool (*cmp)(int a, int b));
+void countingSort(int** arr, int rows);
+void radixSort(int** arr, int rows, bool (*cmp)(int a, int b));
 
-#endif // _MAIN_H_
+void fillArr(int* arr);
+void printArr(int* arr);
+
+
+//////////////// ALERT!! COMPARATORS BELOW ////////////////////////////////////
+/**
+* compareDesc - Compare function that helps in sorting an array
+*				in descending order of absolute magnitude of a number
+*
+* @a: integer
+* @b: integer
+* @return: bool
+*/
+/**
+* compareAsc - Compare function that helps in sorting an array
+*				in ascending order of absolute magnitude of a number
+*
+* @a: integer
+* @b: integer
+* @return: bool
+*/
+
+/** comparators */
+//auto cmpDesc = [](int a, int b) -> bool { return (a < b);};
+//auto cmpAsc = [](int a, int b) -> bool { return (a > b);};
+
+#endif //
 ///////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////// HEADER.H ///////////////////////////////
+////////////////////////////////////// MAIN.H /////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////

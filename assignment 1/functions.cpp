@@ -70,7 +70,6 @@ void fill2dArr(int** arr, int rows)
 			size_t random = rand() % 1001;
 			std::cout<< random <<"\t";
 			arr[index][j] = random;
-			//std::cout<< *arr[j] <<" ";
 		}
 		std::cout << std::endl;
 	}
@@ -99,13 +98,11 @@ void swap(int& a, int& b)
 */
 void bubblesort2d(int** arr, bool (*cmp)(int a, int b))
 {
-	//bool flag;
 	size_t len, i, j;
 
 	len = _msize(arr) / sizeof(arr[0]);
 	for (i = 0; i < len; i++)
 	{
-		//flag = false; /** we haven't swapped anything yet */
 		for (j = 0; j < len; j++)
 		{
 			size_t a, b;
@@ -121,13 +118,68 @@ void bubblesort2d(int** arr, bool (*cmp)(int a, int b))
 				}
 
 				if (cmp(arr[i][j], arr[a][b]))
-				{
-					//flag = true; /** swapping */
 					swap(arr[i][j], arr[a][b]);
-				}
-
 				b++;
 			}
 		}
 	}
 }
+
+/**
+ * radixSort - sort 2d array
+ * 
+ * @arr: array of ints
+ * @rows: number of rows of the array
+ * @cmp: comparator function
+ * 
+ * @return: nothing
+*/
+void radixSort(int** arr, int rows, bool (*cmp)(int a, int b)) {
+	int maxVal = arr[0][0];
+	for (int i = 0; i < rows; i++) {
+		for (int j = 0; j < rows; j++) {
+			if (cmp(arr[i][j], maxVal)) {
+				maxVal = arr[i][j];
+			}
+		}
+	}
+}
+
+/**
+* countSort - sorts an array
+* 
+* @arr: 2d dyanamically allocated array
+* @rows: number of rows
+* @cmp: compare function
+* 
+* @return: void
+*/
+void countingSort(int** arr, int rows) {
+	//int maxRange = _msize(arr)/sizeof(arr[0]);
+	int maxRange = rows;
+	int* count = new int[maxRange + 1];
+	int count_index = 0;
+
+	//count[maxRange] = { 0 };
+	*count = { count_index };
+
+	for (int i = 0; i < rows; i++) {
+		for (int j = 0; j < rows; j++) {
+			count[arr[i][j]]++;
+		}
+	}
+
+	int index = 0;
+	for (int i = 0; i <= maxRange; i++) {
+		while (count[i] > 0) {
+			for (int j = 0; j < rows; j++) {
+				arr[index / rows][index % rows] = i;
+				index++;
+				count[i]--;
+			}
+		}
+	}
+	delete [](count);	// clean up
+}
+
+
