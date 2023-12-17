@@ -70,7 +70,6 @@ void fill2dArr(int** arr, int rows)
 			size_t random = rand() % 1001;
 			std::cout<< random <<"\t";
 			arr[index][j] = random;
-			//std::cout<< *arr[j] <<" ";
 		}
 		std::cout << std::endl;
 	}
@@ -99,13 +98,11 @@ void swap(int& a, int& b)
 */
 void bubblesort2d(int** arr, bool (*cmp)(int a, int b))
 {
-	//bool flag;
 	size_t len, i, j;
 
 	len = _msize(arr) / sizeof(arr[0]);
 	for (i = 0; i < len; i++)
 	{
-		//flag = false; /** we haven't swapped anything yet */
 		for (j = 0; j < len; j++)
 		{
 			size_t a, b;
@@ -121,13 +118,11 @@ void bubblesort2d(int** arr, bool (*cmp)(int a, int b))
 				}
 
 				if (cmp(arr[i][j], arr[a][b]))
-				{
-					//flag = true; /** swapping */
 					swap(arr[i][j], arr[a][b]);
-				}
-
 				b++;
 			}
 		}
 	}
 }
+
+
