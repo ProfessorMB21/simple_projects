@@ -125,4 +125,61 @@ void bubblesort2d(int** arr, bool (*cmp)(int a, int b))
 	}
 }
 
+/**
+ * radixSort - sort 2d array
+ * 
+ * @arr: array of ints
+ * @rows: number of rows of the array
+ * @cmp: comparator function
+ * 
+ * @return: nothing
+*/
+void radixSort(int** arr, int rows, bool (*cmp)(int a, int b)) {
+	int maxVal = arr[0][0];
+	for (int i = 0; i < rows; i++) {
+		for (int j = 0; j < rows; j++) {
+			if (cmp(arr[i][j], maxVal)) {
+				maxVal = arr[i][j];
+			}
+		}
+	}
+}
+
+/**
+* countSort - sorts an array
+* 
+* @arr: 2d dyanamically allocated array
+* @rows: number of rows
+* @cmp: compare function
+* 
+* @return: void
+*/
+void countingSort(int** arr, int rows) {
+	//int maxRange = _msize(arr)/sizeof(arr[0]);
+	int maxRange = rows;
+	int* count = new int[maxRange + 1];
+	int count_index = 0;
+
+	//count[maxRange] = { 0 };
+	*count = { count_index };
+
+	for (int i = 0; i < rows; i++) {
+		for (int j = 0; j < rows; j++) {
+			count[arr[i][j]]++;
+		}
+	}
+
+	int index = 0;
+	for (int i = 0; i <= maxRange; i++) {
+		while (count[i] > 0) {
+			for (int j = 0; j < rows; j++) {
+				arr[index / rows][index % rows] = i;
+				index++;
+				count[i]--;
+			}
+		}
+	}
+	delete [](count);	// clean up
+}
+
 
