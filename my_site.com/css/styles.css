@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", monospace, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    background: url('/images/kfu-logo.png') no-repeat top;
+}
+
+body {
+    backdrop-filter: blur(5px);
+}
+
+/* Navbar section */
+.logo-section img {
+    width: 85px;
+    height: 80px;
+}
+
+.header, .navbar-menu {
+    display: flex;
+}
+
+.navbar-menu li {
+    list-style-type: none;
+    margin-right: 18px;
+    font-size: 22px;
+    transition: text-decoration 1s, font-weight 3s;
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+}
+
+.navbar-menu li a:hover {
+    font-weight: bolder;
+    text-decoration: underline solid blue;
+}
+
+.header {
+    align-items: center;
+    padding: 10px 0px 5px 10px;
+    background-color: #cfcbcb48;
+    position: sticky;
+    box-shadow: -5px -5px 10px blue;
+}
+
+.logo-section {
+    margin-right: 150px;
+}
+
+.logo-section img {
+    cursor: pointer;
+    border-radius: 50px;
+    transition: box-shadow 2s;
+}
+
+.logo-section img:hover {
+    box-shadow: 6px 5px 20px -5px blue;
+}
+
+/* Body section */
+.main-body {
+    background-color: inherit;
+    margin-top: 510px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.click-me-btn {
+    padding: 10px;
+    margin: 10px;
+    font-family: monospace, sans-serif;
+    font-style: oblique;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid green;
+    transition: 0.3s font-weight, 0.8s color, border-color 0.8s;
+}
+
+.click-me-btn:hover {
+    font-weight: bolder;
+    color: rgb(101, 231, 14);
+    border-color: blue;
+}
