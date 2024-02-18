@@ -1,0 +1,47 @@
+:root {
+    --min-mark: 0;
+    --max-mark: 100;
+    --min-color: red;
+    --max-color: green;
+}
+
+.stud-performance {
+    margin-top: 100px;
+    margin-bottom: 400px;
+    font-size: 20px;
+
+}
+
+table {
+    margin-bottom: 40px;
+    background-color: grey;
+    opacity: 0.9;
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+table thead {
+    background-color: rgb(16, 44, 165);
+}
+
+thead tr th {
+    padding: 10px;
+}
+
+td, th {
+    padding: 15px;
+    text-align: left;
+    text-wrap: nowrap;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr td:nth-child(3) {
+    text-align: center;
+    background-color: linear-gradient(
+        to right,
+        var(--min-color) calc(var(--min-mark) * 1%),
+        var(--max-color) calc(var(--max-mark) * 1%),
+        var(--max-color) 100%
+    );
+}

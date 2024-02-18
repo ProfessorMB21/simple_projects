@@ -42,9 +42,12 @@ body {
 
 .header {
     align-items: center;
+    justify-content: space-between;
     padding: 10px 0px 5px 10px;
     background-color: #cfcbcb48;
     position: sticky;
+    top: 0;
+    z-index: 99;
     box-shadow: -5px -5px 10px blue;
 }
 
@@ -55,7 +58,7 @@ body {
 .logo-section img {
     cursor: pointer;
     border-radius: 50px;
-    transition: box-shadow 2s;
+    transition: box-shadow 1s;
 }
 
 .logo-section img:hover {
@@ -88,4 +91,9 @@ body {
     font-weight: bolder;
     color: rgb(101, 231, 14);
     border-color: blue;
+}
+
+/* About-me */
+.bio {
+    
 }
