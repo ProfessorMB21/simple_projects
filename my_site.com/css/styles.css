@@ -8,6 +8,7 @@
 
 html {
     background: url('/images/kfu-logo.png') no-repeat top;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -31,7 +32,7 @@ body {
     transition: text-decoration 1s, font-weight 3s;
 }
 
-.navbar-menu li a {
+.link-active {
     text-decoration: none;
 }
 
@@ -95,5 +96,25 @@ body {
 
 /* About-me */
 .bio {
-    
+    display: flex;
+    flex-flow: nowrap;
+}
+
+.author-figure {
+    border-right: 1px solid blue;
+    border-radius: 2px;
+    box-shadow: 5px 10px 15px 10px rgba(45, 45, 223, 0.616);
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 15px;
+    display: flex;
+}
+
+.figure-picture {
+    width: 200px;
+    border-radius: inherit;
+    height: 200px;
+}
+
+.figure-caption {
+    font-family: ; /* calling-code, roboto, mollen, jarene, */
 }
