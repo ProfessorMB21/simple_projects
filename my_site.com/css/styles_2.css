@@ -36,6 +36,10 @@ td, th {
     border-bottom: 1px solid #ddd;
 }
 
+tbody tr:nth-child(odd) {
+    background-color: rgba(235, 235, 156, 0.5);
+}
+
 tbody tr td:nth-child(3) {
     text-align: center;
     background-color: linear-gradient(

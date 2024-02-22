@@ -7,7 +7,7 @@
 }
 
 html {
-    background: url('/images/kfu-logo.png') no-repeat top;
+    background-image: url('/images/kfu-logo.png');
     scroll-behavior: smooth;
 }
 
@@ -15,7 +15,7 @@ body {
     backdrop-filter: blur(5px);
 }
 
-/* Navbar section */
+/* Header section */
 .logo-section img {
     width: 85px;
     height: 80px;
@@ -59,11 +59,11 @@ body {
 .logo-section img {
     cursor: pointer;
     border-radius: 50px;
-    transition: box-shadow 1s;
+    transition: box-shadow 300ms;
 }
 
 .logo-section img:hover {
-    box-shadow: 6px 5px 20px -5px blue;
+    box-shadow: 6px 5px 20px -10px blue;
 }
 
 /* Body section */
@@ -107,6 +107,7 @@ body {
     border-bottom-right-radius: 30px;
     border-top-left-radius: 15px;
     display: flex;
+    font-weight: bold;
 }
 
 .figure-picture {
@@ -116,5 +117,13 @@ body {
 }
 
 .figure-caption {
-    font-family: ; /* calling-code, roboto, mollen, jarene, */
+    padding-left: 40px;
+    text-align: wrap;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, jarene, dreamy-wallabies; /* calling-code, roboto, mollen, jarene, */
+}
+
+.figure-caption ul li {
+    padding-left: 20px;
+    list-style-position: inside;
+    list-style-type:square;
 }
