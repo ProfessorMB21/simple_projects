@@ -114,7 +114,9 @@ body {
 }
 
 .div-form p,
-#div-respond-form h3, .required {
+#div-respond-form h3,
+.required,
+.table-description p {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 15px;

@@ -1,15 +1,7 @@
-:root {
-    --min-mark: 0;
-    --max-mark: 100;
-    --min-color: red;
-    --max-color: green;
-}
-
 .stud-performance {
-    margin-top: 100px;
+    margin-top: 60px;
     margin-bottom: 400px;
     font-size: 20px;
-
 }
 
 table {
@@ -41,15 +33,18 @@ tbody tr:nth-child(odd) {
 
 tbody tr td:nth-child(3) {
     text-align: center;
-    background-color: linear-gradient(
-        to right,
-        var(--min-color) calc(var(--min-mark) * 1%),
-        var(--max-color) calc(var(--max-mark) * 1%),
-        var(--max-color) 100%
-    );
 }
 
 progress {
     padding: 0 5px 5px 0px;
     height: 20px;
+}
+
+.table-description {
+    padding-bottom: 40px;
+}
+
+.table-description p {
+    font-size: 30px;
+    letter-spacing: 2px;
 }
