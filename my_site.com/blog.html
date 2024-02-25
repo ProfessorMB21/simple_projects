@@ -36,5 +36,34 @@
                 </ul>
             </div>
         </section>
+        <section class="main-body comments-div">
+            <div class="div-comment-icon">
+                <img src="images/comment_section_logo.png" alt="comment-section-logo">
+            </div>
+
+            <div id="div-respond-form">
+                <h3>Leave a Comment :)</h3>
+                <form action="blog.html" method="post" class="comment-form">
+                    <div>
+                        <label for="comment_author" class="required">Your name</label>
+                        <input name="user-name" type="text"placeholder="Full name" required="required">
+                    </div>
+                  
+                    <div>
+                        <label for="email" class="required">Your email</label>
+                        <input name="user-email" type="email" placeholder="user@domain.com" required="required">
+                    </div>
+                    
+                    <div>
+                        <label for="comment" class="required">Your message</label>
+                        <textarea name="user-comment" id="comment" rows="2" cols="250" placeholder="Comment here..." minlength="8" maxlength="4086" required="required"></textarea>
+                    </div>
+                 
+                  <input name="submit" type="submit" value="Submit comment"/>
+              
+                </form>
+              </div>
+        </section>
+<!--CONTENT-->
     </body>
 </html>

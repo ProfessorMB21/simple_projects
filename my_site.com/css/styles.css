@@ -113,7 +113,8 @@ body {
     border: none;
 }
 
-.div-form p {
+.div-form p,
+#div-respond-form h3, .required {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 15px;
@@ -133,9 +134,11 @@ body {
     font-size: 36px;
     padding: 5px 0px 10px 5px;
     margin-bottom: 15px;
+    width: 100%;
 }
 
-.login-form input:nth-child(5) {
+.login-form input:nth-child(5),
+.comment-form input[type='submit'] {
     border: 1px solid  rgba(0, 0, 253, 0.938);
     border-bottom-right-radius: 10px;
     font-size: 24px;
@@ -147,7 +150,8 @@ body {
     transition: background-color 600ms, color 300ms, font-weight 600ms;
 }
 
-.login-form input:nth-child(5):hover {
+.login-form input:nth-child(5):hover,
+.comment-form input[type='submit']:hover {
     background-color:  rgba(15, 15, 255, 0.863);
     color: #ffffff;
     font-weight: 300;
@@ -186,4 +190,70 @@ body {
     padding-left: 20px;
     list-style-position: inside;
     list-style-type:square;
-   }
+}
+
+/* Blog section */
+.comments-div {
+    align-items: flex-start;
+}
+.div-comment-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.div-comment-icon img{
+    width: 20%;
+}
+
+#div-respond-form {
+    margin-top: 40px;
+    padding: 26px;
+    display: inline-flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#div-respond-form h3, .required {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.comment-form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comment-form div {
+    width: 50%;
+    margin-top: 10px;
+}
+
+#div-respond-form input[type='text'],
+#div-respond-form input[type='email'],
+.comment-form input[type='submit'],
+#div-respond-form textarea {
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    border: 1px solid  rgba(0, 0, 253, 0.938);
+    padding: 5px 300px 20px 5px;
+    border-end-end-radius: 10px;
+    font-size: 20px;
+}
+
+#div-respond-form textarea  {
+    padding-bottom: 120px;
+    resize: none;
+}
+
+.comment-form input[type='submit'] {
+    margin-top: 10px;
+    font-size: 18px;
+    width: 180px;
+    padding: 5px 0px 10px 5px;
+}
