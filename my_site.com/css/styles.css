@@ -7,7 +7,7 @@
 }
 
 html {
-    background-image: url('/images/kfu-logo.png');
+    background: url('/images/kfu-logo.png');
     scroll-behavior: smooth;
 }
 
@@ -69,32 +69,91 @@ body {
 /* Body section */
 .main-body {
     background-color: inherit;
-    margin-top: 510px;
+    margin-top: 30px;
     margin-bottom: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-.click-me-btn {
-    padding: 10px;
-    margin: 10px;
-    font-family: monospace, sans-serif;
-    font-style: oblique;
-    cursor: pointer;
+.div-welcome p {
+    font-size: 44px;
+    font-weight: 600;
+    color: rgb(24, 24, 240);
+}
+
+.typewriter p {
+    overflow: hidden;
+    border-right: .15em solid rgb(24, 24, 240);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation:
+        typing 3.5s steps(100, end),
+        blink-caret .3s step-end infinite
+    ;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent}
+    50% { border-color: blue;}
+}
+
+/* form styling */
+.div-form {
+    padding: 26px;
+    margin-top: 50px;
+    box-shadow: 5px 5px 100px rgba(220, 20, 60, 0.226);
+    border: none;
+}
+
+.div-form p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: rgba(255, 60, 0, 0.774);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form input {
+    display: block;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 253, 0.938);
+    font-size: 36px;
+    padding: 5px 0px 10px 5px;
+    margin-bottom: 15px;
+}
+
+.login-form input:nth-child(5) {
+    border: 1px solid  rgba(0, 0, 253, 0.938);
+    border-bottom-right-radius: 10px;
+    font-size: 24px;
+    border-top-left-radius: 10px;
+    margin-top: 30px;
+    width: 150px;
     background-color: white;
-    color: black;
-    border-radius: 5px;
-    border: 1px solid green;
-    transition: 0.3s font-weight, 0.8s color, border-color 0.8s;
+    cursor: pointer;
+    transition: background-color 600ms, color 300ms, font-weight 600ms;
 }
 
-.click-me-btn:hover {
-    font-weight: bolder;
-    color: rgb(101, 231, 14);
-    border-color: blue;
+.login-form input:nth-child(5):hover {
+    background-color:  rgba(15, 15, 255, 0.863);
+    color: #ffffff;
+    font-weight: 300;
 }
 
-/* About-me */
+/* About-me section */
 .bio {
     display: flex;
     flex-flow: nowrap;
@@ -119,11 +178,12 @@ body {
 .figure-caption {
     padding-left: 40px;
     text-align: wrap;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, jarene, dreamy-wallabies; /* calling-code, roboto, mollen, jarene, */
+    font-size: 24px;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, jarene, dreamy-wallabies; /* calling-code, roboto, mollen, jarene, */
 }
 
 .figure-caption ul li {
     padding-left: 20px;
     list-style-position: inside;
     list-style-type:square;
-}
+   }
