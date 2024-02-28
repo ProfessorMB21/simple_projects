@@ -259,3 +259,7 @@ body {
     width: 180px;
     padding: 5px 0px 10px 5px;
 }
+
+.chatbox-container {
+    display: inherit;
+}
