@@ -116,14 +116,17 @@ body {
 .div-form p,
 #div-respond-form h3,
 .required,
-.table-description p {
+.table-description p,
+#comment-section-head {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 15px;
     color: rgba(255, 60, 0, 0.774);
 }
 
-.login-form {
+.login-form,
+#comment-section-body,
+#comment-section-body #comment-block {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -262,4 +265,51 @@ body {
 
 .chatbox-container {
     display: inherit;
+    flex-flow: column;
+}
+
+.div-comment-section {
+    background-color: grey;
+    padding: 50px;
+    margin-top: 25px;
+}
+
+.div-comment-section #comment-section-head {
+    border-bottom: 1px solid rgba(0, 0, 253, 0.938);
+    margin-bottom: 10px;
+}
+
+.div-comment-section #comment-section-body {
+    background-color: brown;
+    padding: inherit;
+    padding-bottom: 300px;
+    scroll-behavior:smooth;
+    box-shadow: 1px 1px 10px 1px rgba(255, 60, 0, 0.774);
+    overflow-y: auto;
+    align-items: flex-start;
+}
+
+#comment-section-body #comment-block {
+    align-items: flex-start;
+    flex-direction: row;
+    background-color: greenyellow;
+    padding: 8px 12px 8px 12px;
+    width: 1250px;
+    min-width: 720px;
+    border-radius: 44px;
+    text-wrap: wrap;
+}
+
+#author-thumbnail {
+    margin-right: 10px;
+}
+
+#author-thumbnail-circle {
+    padding: 40px;
+    background-color: rgba(99, 99, 129, 0.938);
+    border-radius: 40px;
+}
+
+#comment-block #main {
+    margin-left: 10px;
 }
