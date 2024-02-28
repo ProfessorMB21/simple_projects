@@ -126,7 +126,8 @@ body {
 
 .login-form,
 #comment-section-body,
-#comment-section-body #comment-block {
+#comment-section-body #comment-block,
+#comment-block #main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -311,5 +312,19 @@ body {
 }
 
 #comment-block #main {
+    align-items: flex-start;
     margin-left: 10px;
+    padding: 5px;
+}
+
+#main #comment-header p,
+#main #comment-content {
+    font-family: Roboto, arial, sans-serif;
+}
+
+#main #comment-header p {
+    font-style: oblique;
+    font-weight: bold;
+    margin-bottom: 3px;
+    margin-top: 3px;
 }
