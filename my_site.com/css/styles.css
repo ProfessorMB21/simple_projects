@@ -7,7 +7,6 @@
 }
 
 html {
-    background: url('/images/kfu-logo.png');
     scroll-behavior: smooth;
 }
 
@@ -299,6 +298,7 @@ body {
     min-width: 720px;
     border-radius: 44px;
     text-wrap: wrap;
+    margin-bottom: 40px;
 }
 
 #author-thumbnail {
