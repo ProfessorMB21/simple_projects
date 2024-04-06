@@ -289,7 +289,6 @@ body {
     padding: inherit;
     padding-bottom: 300px;
     scroll-behavior:smooth;
-    box-shadow: 1px 1px 10px 1px rgba(255, 60, 0, 0.774);
     overflow-y: auto;
     align-items: flex-start;
     max-height: 1200px;
