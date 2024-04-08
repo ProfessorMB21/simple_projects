@@ -94,6 +94,30 @@ iframe {
     padding-top: 10px;
 }
 
+.cx-data {
+    align-items: flex-start;
+}
+
+.form-field p {
+    display: inline;
+}
+
+select {
+    padding: 14px;
+    padding-right: 30px;
+    border: none;
+    margin-bottom: 15px;
+    font-size: large;
+}
+
+#client-sex {
+    margin-left: 58px;
+}
+
+.cx-data .submit-btn-form {
+    align-self: center;
+}
+
 .limiter {
     width: 100%;
     margin: 0 auto

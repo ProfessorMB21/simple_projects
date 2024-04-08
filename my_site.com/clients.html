@@ -48,11 +48,24 @@
                         <form method="post" action="clients.html" class="login-form cx-data">
                             <input type="text" placeholder="First name" required>
                             <input type="text" placeholder="Last name" required>
-                            <input type="text" placeholder="Sex" required>
                             <input type="number" placeholder="Age">
-                            <input type="text" placeholder="Place of work" required>
-                            <input type="text" placeholder="Purpose" required>
-                            <input type="submit" value="Add client" id="btn-submit">
+                            <input type="number" placeholder="Income">
+                            <input type="text" placeholder="Place of work" required><br><br>
+                            <div class="form-field">
+                                <label for="client-sex"><p>Sex</p></label>
+                                <select name="sex-opt" title="sex-droplist" id="client-sex">
+                                    <option value="credit">Male</option>
+                                    <option value="debit">Female</option>
+                                </select>    
+                            </div>
+                            <div class="form-field">
+                                    <label for="client-purpose"><p>Purpose</p></label>
+                                    <select name="purpose-opt" title="purpose-droplist" id="client-purpose">
+                                        <option value="credit">Credit</option>
+                                        <option value="debit">Debit</option>
+                                    </select>
+                            </div>
+                            <input class="submit-btn-form" type="submit" value="Add client" id="btn-submit">
                         </form>
                     </div>
 <!--FORM-->
